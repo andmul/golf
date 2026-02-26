@@ -1,0 +1,69 @@
+Warning: `reflex.plugins.sitemap.SitemapPlugin` plugin is enabled by default,
+but not explicitly added to the config. If you want to use it, please add it to
+the `plugins` list in your config inside of `rxconfig.py`. To disable this
+plugin, set `disable_plugins` to `['reflex.plugins.sitemap.SitemapPlugin']`.
+Warning: `reflex.plugins.sitemap.SitemapPlugin` plugin is enabled by default,
+but not explicitly added to the config. If you want to use it, please add it to
+the `plugins` list in your config inside of `rxconfig.py`. To disable this
+plugin, set `disable_plugins` to `['reflex.plugins.sitemap.SitemapPlugin']`.
+───────────────────────────── Starting Reflex App ──────────────────────────────
+Loading data from: /app/golf_reflex/data/data.csv
+Loaded 42 rows.
+Warning: `reflex.plugins.sitemap.SitemapPlugin` plugin is enabled by default,
+but not explicitly added to the config. If you want to use it, please add it to
+the `plugins` list in your config inside of `rxconfig.py`. To disable this
+plugin, set `disable_plugins` to `['reflex.plugins.sitemap.SitemapPlugin']`.
+DeprecationWarning: state_auto_setters defaulting to True has been deprecated in
+version 0.8.9. The default value will be changed to False in a future release.
+Set state_auto_setters explicitly or define setters explicitly. Used
+set_nur_turniere_mit_ergebnis in AppState without defining it. It will be
+completely removed in 0.9.0. (golf_reflex/golf_reflex.py:200)
+DeprecationWarning: state_auto_setters defaulting to True has been deprecated in
+version 0.8.9. The default value will be changed to False in a future release.
+Set state_auto_setters explicitly or define setters explicitly. Used
+set_nur_individuell in AppState without defining it. It will be completely
+removed in 0.9.0. (golf_reflex/golf_reflex.py:205)
+[13:16:46] Compiling: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 20/20 0:00:00
+───────────────────────────────── App Running ──────────────────────────────────
+Loading data from: /app/golf_reflex/data/data.csv
+Loaded 42 rows.
+Warning: `reflex.plugins.sitemap.SitemapPlugin` plugin is enabled by default,
+but not explicitly added to the config. If you want to use it, please add it to
+the `plugins` list in your config inside of `rxconfig.py`. To disable this
+plugin, set `disable_plugins` to `['reflex.plugins.sitemap.SitemapPlugin']`.
+App running at: http://localhost:3000/
+Backend running at: http://0.0.0.0:8000
+Loading data from: /app/golf_reflex/data/data.csv
+Loaded 42 rows.
+Warning: `reflex.plugins.sitemap.SitemapPlugin` plugin is enabled by default,
+but not explicitly added to the config. If you want to use it, please add it to
+the `plugins` list in your config inside of `rxconfig.py`. To disable this
+plugin, set `disable_plugins` to `['reflex.plugins.sitemap.SitemapPlugin']`.
+DeprecationWarning: state_auto_setters defaulting to True has been deprecated in
+version 0.8.9. The default value will be changed to False in a future release.
+Set state_auto_setters explicitly or define setters explicitly. Used
+set_nur_turniere_mit_ergebnis in AppState without defining it. It will be
+completely removed in 0.9.0. (golf_reflex/golf_reflex.py:200)
+DeprecationWarning: state_auto_setters defaulting to True has been deprecated in
+version 0.8.9. The default value will be changed to False in a future release.
+Set state_auto_setters explicitly or define setters explicitly. Used
+set_nur_individuell in AppState without defining it. It will be completely
+removed in 0.9.0. (golf_reflex/golf_reflex.py:205)
+[13:17:22] Compiling: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 20/20 0:00:00
+Loading data from: /app/golf_reflex/data/data.csv
+Loaded 42 rows.
+Warning: `reflex.plugins.sitemap.SitemapPlugin` plugin is enabled by default,
+but not explicitly added to the config. If you want to use it, please add it to
+the `plugins` list in your config inside of `rxconfig.py`. To disable this
+plugin, set `disable_plugins` to `['reflex.plugins.sitemap.SitemapPlugin']`.
+DeprecationWarning: state_auto_setters defaulting to True has been deprecated in
+version 0.8.9. The default value will be changed to False in a future release.
+Set state_auto_setters explicitly or define setters explicitly. Used
+set_nur_turniere_mit_ergebnis in AppState without defining it. It will be
+completely removed in 0.9.0. (golf_reflex/golf_reflex.py:200)
+DeprecationWarning: state_auto_setters defaulting to True has been deprecated in
+version 0.8.9. The default value will be changed to False in a future release.
+Set state_auto_setters explicitly or define setters explicitly. Used
+set_nur_individuell in AppState without defining it. It will be completely
+removed in 0.9.0. (golf_reflex/golf_reflex.py:205)
+[13:17:30] Compiling: ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 20/20 0:00:00
