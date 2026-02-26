@@ -108,6 +108,13 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
                 font=dict(size=10, color="firebrick"),
             )
 
+    # Determine safe Brutto range
+    max_brutto = df["Brutto"].max()
+    if pd.isna(max_brutto) or max_brutto == 0:
+        y2_range = [0, 50]
+    else:
+        y2_range = [0, max_brutto * 1.1]
+
     fig.update_layout(
         height=650,
         template="plotly_white",
@@ -120,6 +127,7 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
             ticktext=df["Datum"].dt.strftime("%d-%m-%y"),
             tickangle=45,
             rangeslider=dict(visible=True, thickness=0.06),
+            range=[-0.5, len(df) - 0.5],
         ),
         yaxis=dict(
             title="HCP",
@@ -130,6 +138,7 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
             overlaying="y",
             side="right",
             range=[0, df["Brutto"].max() * 1.1] if not df["Brutto"].isna().all() else [0, 50],
+            range=y2_range,
         ),
     )
 
