@@ -115,40 +115,30 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
     else:
         y2_range = [0, max_brutto * 1.1]
 
-    # Calculate revision hash based on data to force view reset on filter change
-    data_revision = f"{len(df)}_{df['Datum'].iloc[0] if not df.empty else 'empty'}"
-
     fig.update_layout(
-        uirevision=data_revision, # Force reset if data changes significantly
         height=650,
         template="plotly_white",
         hovermode="x unified",
         bargap=0.2,
         showlegend=False,
         title=dict(text="Turniere & Handicap-Verlauf", x=0.5),
-        dragmode="pan",  # Enable panning by default
         xaxis=dict(
             tickvals=df["ContinuousIndex"],
             ticktext=df["Datum"].dt.strftime("%d-%m-%y"),
             tickangle=45,
             rangeslider=dict(visible=True, thickness=0.06),
             range=[-0.5, len(df) - 0.5],
-            minallowed=-0.5,
-            maxallowed=len(df) - 0.5,
-            fixedrange=False,
-            constrain="domain",
         ),
         yaxis=dict(
             title="HCP",
             range=[hcp_min - hcp_pad, hcp_max + hcp_pad],
-            fixedrange=True,  # Disable vertical zoom/pan
         ),
         yaxis2=dict(
             title="Brutto",
             overlaying="y",
             side="right",
+            range=[0, df["Brutto"].max() * 1.1] if not df["Brutto"].isna().all() else [0, 50],
             range=y2_range,
-            fixedrange=True,  # Disable vertical zoom/pan
         ),
     )
 
