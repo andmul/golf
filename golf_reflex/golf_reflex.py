@@ -137,6 +137,7 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
             title="Brutto",
             overlaying="y",
             side="right",
+            range=[0, df["Brutto"].max() * 1.1] if not df["Brutto"].isna().all() else [0, 50],
             range=y2_range,
         ),
     )
