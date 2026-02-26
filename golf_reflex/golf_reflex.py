@@ -115,7 +115,11 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
     else:
         y2_range = [0, max_brutto * 1.1]
 
+    # Calculate revision hash based on data to force view reset on filter change
+    data_revision = f"{len(df)}_{df['Datum'].iloc[0] if not df.empty else 'empty'}"
+
     fig.update_layout(
+        uirevision=data_revision, # Force reset if data changes significantly
         height=650,
         template="plotly_white",
         hovermode="x unified",
@@ -129,7 +133,10 @@ def build_figure(df: pd.DataFrame) -> go.Figure:
             tickangle=45,
             rangeslider=dict(visible=True, thickness=0.06),
             range=[-0.5, len(df) - 0.5],
+            minallowed=-0.5,
+            maxallowed=len(df) - 0.5,
             fixedrange=False,
+            constrain="domain",
         ),
         yaxis=dict(
             title="HCP",
